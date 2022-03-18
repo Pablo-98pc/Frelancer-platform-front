@@ -1,7 +1,9 @@
 import { useEffect ,useContext} from "react"
 import {UserContext} from '../pages/_app'
+import { useRouter } from "next/dist/client/router"
 
 export default function Header(){
+    const router = useRouter()
     const {userLogged,setUserLogged} = useContext(UserContext)
 
     const handleLogOut = () => {
@@ -9,7 +11,7 @@ export default function Header(){
         setUserLogged(null)
         console.log(userLogged)
     }
-    return <><button onClick={handleLogOut}>LogOut</button><style jsx>{`
+    return <><button onClick={handleLogOut}>LogOut</button> <button onClick={() => router.push('/home')}>Home</button><style jsx>{`
         button{
             display:flex;
             flex-direction:row;
