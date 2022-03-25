@@ -32,8 +32,7 @@ export default function LogIn() {
     const loggedUserJSON = window.localStorage.getItem('userlogged');
     if (loggedUserJSON) {
         const user = JSON.parse(loggedUserJSON);
-        setUserLogged(user);
-
+        setUserLogged(user)
     }
   },[])
 
