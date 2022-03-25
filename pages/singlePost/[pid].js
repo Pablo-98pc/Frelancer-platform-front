@@ -1,4 +1,4 @@
-import axios from "axios"
+/* import axios from "axios"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router";
 import Header from "../../components/header";
@@ -40,4 +40,4 @@ const SinglePost =  () =>{
 </>
 
 }
-export default SinglePost
+export default SinglePost */

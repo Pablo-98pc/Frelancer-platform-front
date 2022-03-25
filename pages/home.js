@@ -4,6 +4,9 @@ import { useRouter } from 'next/router'
 import Header from "../components/header"
 import Posts from "../components/posts"
 import CreatePosts from "../components/createPost"
+import Link from 'next/link'
+import Chats from "../components/chats"
+import NewChat from "../components/newChat"
 
 
 export default function Home() {
@@ -16,7 +19,7 @@ export default function Home() {
       
     })
 
-    return <><Header></Header><div className="posts"><Posts></Posts></div><CreatePosts></CreatePosts><style jsx>{`
+    return <><Header></Header><div className="posts"><Posts></Posts></div><CreatePosts></CreatePosts><Chats></Chats><style jsx>{`
         .posts{
             display:flex;
             flex-direction:column;

@@ -60,6 +60,9 @@ export default function Posts()  {
         </Typography>
       </CardContent> 
       </Link>
+      {userLogged.userName != post.userCreator ? <Link href={`/chat/${post.userCreator}`}>
+         <a>Contact</a>
+       </Link>  :null }
      <StarBorderIcon style={{color:'yellow'}} onClick={(e) =>  handleLikes(post,e)}/>
     </CardActionArea>
   </Card> ); else if (!userLogged.likes.includes(post.id)) return (<Card sx={{ width: 345,margin:'30px' }} key={index}>
@@ -76,6 +79,9 @@ export default function Posts()  {
         </Typography>
       </CardContent> 
        </Link>
+       {userLogged.userName != post.userCreator ? <Link href={`/chat/${post.userCreator}`}>
+         <a>Contact</a>
+       </Link>  :null }
        <StarBorderIcon  style={{color:'black'}} onClick={(e) =>  handleLikes(post,e)}/>
     </CardActionArea>
   
